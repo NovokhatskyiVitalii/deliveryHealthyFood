@@ -4,8 +4,13 @@ import tabs from './modules/tabs';
 import slider from './modules/slider';
 import calc from './modules/calc';
 import timer from './modules/timer';
+import modal from './modules/modal';
+import {openModal} from './modules/modal';
+import forms from './modules/forms';
 
 window.addEventListener('DOMContentLoaded', () => {
+
+    const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 5000);
 
     tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     slider({
@@ -20,4 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     calc();
     timer('.timer', '2023-07-25');
+    modal('[data-modal]', '.modal', modalTimerId);
+    forms('form', modalTimerId);
 });
