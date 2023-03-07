@@ -7,6 +7,7 @@ import timer from './modules/timer';
 import modal from './modules/modal';
 import {openModal} from './modules/modal';
 import forms from './modules/forms';
+import cards from './modules/cards';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -27,4 +28,5 @@ window.addEventListener('DOMContentLoaded', () => {
     timer('.timer', '2023-07-25');
     modal('[data-modal]', '.modal', modalTimerId);
     forms('form', modalTimerId);
+    cards();
 });
