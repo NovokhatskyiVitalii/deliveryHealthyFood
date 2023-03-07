@@ -2,6 +2,8 @@ import './sass/style.scss';
 
 import tabs from './modules/tabs';
 import slider from './modules/slider';
+import calc from './modules/calc';
+import timer from './modules/timer';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -15,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
         currentCounter: '#current',
         wrapper: '.offer__slider-wrapper',
         field: '.offer__slider-inner'
-
     });
+    calc();
+    timer('.timer', '2023-07-25');
 });
